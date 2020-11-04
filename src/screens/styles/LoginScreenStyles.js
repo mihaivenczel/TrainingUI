@@ -2,57 +2,58 @@ import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
   background: {
-    flex: 1,
-    width: '100%',
-    height: '100%',
-    position: 'absolute',
+
   },
-  mainContainer: {
+  bckgColor: {
     flex: 1,
     backgroundColor: '#46D0D9',
+    
+  },
+  mainContainer: {
+    flex: 2,
+    backgroundColor: '#F8FBFF',
   },
   secondContainer: {
     justifyContent: 'center',
     flex: 1,
-    marginTop: '25%',
+    marginTop: '49%',
+    bottom: '8%',
   },
   logo: {
     alignSelf: 'center',
-    marginTop: '5%',
+    marginTop: '10%',
   },
   inputIcons: {
+    alignItems: 'center',
     alignSelf: 'flex-end',
+
   },
   inputContainer: {
-      marginBottom:20,
+    top: 10,
+    marginHorizontal: 20,
   },
   emailText: {
-    margin: 5,
-    paddingLeft: 19,
+    marginLeft: 5,
     color: '#13497B',
   },
   passwordText: {
-    margin: 5,
-    paddingLeft: 19,
+    marginLeft: 5,
     color: '#13497B',
   },
   inputEmail: {
     borderRadius: 10,
     minWidth: '90%',
     alignSelf: 'center',
-    padding: 10,
-    paddingHorizontal: 10,
-    backgroundColor: 'white',
   },
   inputPassword: {
     borderRadius: 10,
     minWidth: '90%',
     alignSelf: 'center',
     padding: 10,
-    paddingHorizontal: 10,
     backgroundColor: 'white',
   },
   registerContainer: {
+    top: '5%',
     paddingHorizontal: '3%',
     height: 50,
     justifyContent: 'space-between',
@@ -88,6 +89,7 @@ export default StyleSheet.create({
     alignSelf: 'center',
   },
   button: {
+    top: 15,
     backgroundColor: '#13497B',
     borderRadius: 10,
     minWidth: '90%',

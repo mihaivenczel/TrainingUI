@@ -12,6 +12,7 @@ const defaultNavigationOptions = () => ({
   headerShown: false,
 });
 
+
 const MainStackNavigator = () => (
   <NavigationContainer>
     <Stack.Navigator
