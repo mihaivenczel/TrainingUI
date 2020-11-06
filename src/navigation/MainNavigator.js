@@ -3,7 +3,8 @@ import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
 import {roots} from '.';
 import LoginScreen from '../screens/LoginScreen';
-import HomeScreen from '../screens/HomeScreen';
+import AccountScreen from '../screens/AccountScreen';
+import HomeNavigator from './HomeNavigator';
 
 const Stack = createStackNavigator();
 
@@ -11,7 +12,6 @@ const defaultNavigationOptions = () => ({
   gestureEnabled: false,
   headerShown: false,
 });
-
 
 const MainStackNavigator = () => (
   <NavigationContainer>
@@ -26,7 +26,12 @@ const MainStackNavigator = () => (
       <Stack.Screen
         screenOptions={defaultNavigationOptions}
         name={roots.Home}
-        component={HomeScreen}
+        component={HomeNavigator}
+      />
+      <Stack.Screen
+        screenOptions={defaultNavigationOptions}
+        name={roots.Account}
+        component={AccountScreen}
       />
     </Stack.Navigator>
   </NavigationContainer>
