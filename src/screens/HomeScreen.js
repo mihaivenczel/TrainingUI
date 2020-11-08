@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Text,
@@ -48,7 +48,8 @@ const HomeScreen = ({navigation}) => {
               />
             </TouchableOpacity>
 
-            <TouchableOpacity onPress={() => navigation.navigate('AccountScreen')}>
+            <TouchableOpacity
+              onPress={() => navigation.navigate('AccountScreen')}>
               <Image source={require('../../assets/images/settings.png')} />
             </TouchableOpacity>
           </View>
@@ -75,29 +76,22 @@ const HomeScreen = ({navigation}) => {
                 />
               </TouchableOpacity>
             }
-            inputContainerStyle={{
-              borderBottomWidth: 0,
-              borderRadius: 10,
-              alignSelf: 'center',
-              padding: 8,
-              paddingHorizontal: 10,
-              backgroundColor: 'white',
-            }}
+            inputContainerStyle={styles.homeSearchOutside}
           />
         </View>
 
         <View style={styles.categoryContainer}>
-          <TouchableOpacity style={styles.homeBox}>
+          <TouchableOpacity style={styles.boxHighlight}>
             <Image source={require('../../assets/images/house.png')} />
             <Text style={styles.homeText}>Home</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.blocBox}>
+          <TouchableOpacity style={styles.boxNoHighlight}>
             <Image source={require('../../assets/images/bloc.png')} />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.blocBox}>
+          <TouchableOpacity style={styles.boxNoHighlight}>
             <Image source={require('../../assets/images/keys.png')} />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.blocBox}>
+          <TouchableOpacity style={styles.boxNoHighlight}>
             <Image source={require('../../assets/images/percentage.png')} />
           </TouchableOpacity>
         </View>

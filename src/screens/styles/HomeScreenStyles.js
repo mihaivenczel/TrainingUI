@@ -10,7 +10,7 @@ export default StyleSheet.create({
     backgroundColor: '#F8FBFF',
   },
   headerContainer: {
-    marginTop: '5%',
+    marginTop: 40,
     flexDirection: 'row',
     alignItems: 'center',
   },
@@ -65,34 +65,42 @@ export default StyleSheet.create({
     minWidth: '87%',
     alignSelf: 'center',
     padding: 10,
-    paddingHorizontal: 10,
+  },
+  homeSearchOutside: {
+    borderBottomWidth: 0,
+    borderRadius: 10,
+    alignSelf: 'center',
+    padding: 8,
+    marginHorizontal: 27,
+    backgroundColor: 'white',
   },
   categoryContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginTop: '4%',
   },
-  homeBox: {
+  boxHighlight: {
     backgroundColor: '#46D0D9',
     borderRadius: 10,
-    flexDirection: 'column',
+
     padding: 20,
     paddingBottom: 40,
   },
-  homeText: {
-    color: '#FFFFFF',
-    fontWeight: 'bold',
-    alignSelf: 'center',
-    top: '50%',
-    fontSize: 16,
-  },
-  blocBox: {
+  boxNoHighlight: {
     backgroundColor: '#FFFFFF',
     borderRadius: 10,
     paddingHorizontal: 20,
     padding: 20,
     alignSelf: 'flex-start',
   },
+  homeText: {
+    color: '#FFFFFF',
+    fontWeight: 'bold',
+    alignSelf: 'center',
+    top: 30,
+    fontSize: 16,
+  },
+
   houseContainer: {
     top: 1,
     elevation: 0.5,
@@ -125,7 +133,7 @@ export default StyleSheet.create({
   },
   detailLocationContainer1: {
     flex: 1,
-    marginLeft:26,
+    marginLeft: 26,
   },
   like: {
     position: 'absolute',
@@ -140,7 +148,7 @@ export default StyleSheet.create({
     marginBottom: 15,
   },
   houseTextTitle: {
-    marginLeft:26,
+    marginLeft: 26,
     fontWeight: 'bold',
     color: '#143656',
     fontSize: 20,
@@ -192,19 +200,21 @@ export default StyleSheet.create({
     flexDirection: 'row',
     alignSelf: 'flex-end',
     marginRight: 25,
-
     color: '#143656',
     fontWeight: 'bold',
   },
   roomNumbers: {
     fontSize: 12,
     marginLeft: 2,
+    padding: 1,
+    top: 3,
     color: '#8A9BAB',
   },
   rooms: {
     flexDirection: 'row',
     padding: 5,
-    alignSelf:'flex-end',
+    alignSelf: 'flex-end',
+    alignItems: 'flex-end',
     marginRight: 25,
   },
   roomIcon: {

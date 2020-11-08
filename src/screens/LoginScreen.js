@@ -63,15 +63,7 @@ const LoginScreen = ({navigation}) => {
                     />
                   ) : null
                 }
-                inputContainerStyle={{
-                  
-                  borderBottomWidth: 0,
-                  borderRadius: 10,
-                  minWidth: '90%',
-                  alignSelf: 'center',
-                  paddingHorizontal: 13,
-                  backgroundColor: 'white',
-                }}
+                inputContainerStyle={LoginScreenStyles.inputEmailOutside}
               />
             </View>
 
@@ -93,14 +85,7 @@ const LoginScreen = ({navigation}) => {
                     <Image source={require('../../assets/images/eye.png')} />
                   </TouchableOpacity>
                 }
-                inputContainerStyle={{
-                  borderBottomWidth: 0,
-                  borderRadius: 10,
-                  minWidth: '90%',
-                  alignSelf: 'center',
-                  paddingHorizontal: 13,
-                  backgroundColor: 'white',
-                }}
+                inputContainerStyle={LoginScreenStyles.inputPasswordOutside}
               />
             </View>
             <View>

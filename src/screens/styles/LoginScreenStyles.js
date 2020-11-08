@@ -1,13 +1,10 @@
 import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
-  background: {
-
-  },
+  background: {},
   bckgColor: {
     flex: 1,
     backgroundColor: '#46D0D9',
-    
   },
   mainContainer: {
     flex: 2,
@@ -26,30 +23,48 @@ export default StyleSheet.create({
   inputIcons: {
     alignItems: 'center',
     alignSelf: 'flex-end',
-
   },
   inputContainer: {
     top: 10,
     marginHorizontal: 20,
   },
   emailText: {
+    paddingBottom: 6,
     marginLeft: 5,
     color: '#13497B',
   },
   passwordText: {
+    paddingBottom: 6,
     marginLeft: 5,
     color: '#13497B',
   },
   inputEmail: {
     borderRadius: 10,
+    paddingHorizontal: 13,
     minWidth: '90%',
     alignSelf: 'center',
+  },
+  inputEmailOutside: {
+    borderBottomWidth: 0,
+    borderRadius: 10,
+    paddingHorizontal: 13,
+    minWidth: '90%',
+    alignSelf: 'center',
+    backgroundColor: 'white',
   },
   inputPassword: {
     borderRadius: 10,
     minWidth: '90%',
     alignSelf: 'center',
     padding: 10,
+    backgroundColor: 'white',
+  },
+  inputPasswordOutside: {
+    borderBottomWidth: 0,
+    borderRadius: 10,
+    minWidth: '90%',
+    alignSelf: 'center',
+    paddingHorizontal: 13,
     backgroundColor: 'white',
   },
   registerContainer: {
