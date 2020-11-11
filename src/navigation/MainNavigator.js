@@ -5,6 +5,7 @@ import {roots} from '.';
 import LoginScreen from '../screens/LoginScreen';
 import AccountScreen from '../screens/AccountScreen';
 import HomeNavigator from './HomeNavigator';
+import DetailsScreen from '../screens/DetailsScreen';
 
 const Stack = createStackNavigator();
 
@@ -27,6 +28,11 @@ const MainStackNavigator = () => (
         screenOptions={defaultNavigationOptions}
         name={roots.Home}
         component={HomeNavigator}
+      />
+      <Stack.Screen
+        screenOptions={defaultNavigationOptions}
+        name={roots.Details}
+        component={DetailsScreen}
       />
       <Stack.Screen
         screenOptions={defaultNavigationOptions}

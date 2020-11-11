@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {
   View,
   Text,
@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import {HomeScreenStyles as styles} from './styles';
 import {Input} from 'react-native-elements';
+import {strings} from '../core/constants';
 
 const HomeScreen = ({navigation}) => {
   return (
@@ -31,7 +32,7 @@ const HomeScreen = ({navigation}) => {
               />
             </TouchableOpacity>
             <View style={styles.locationContainer}>
-              <Text style={styles.text}>Los angeles, CA</Text>
+              <Text style={styles.text}>{strings.location}</Text>
               <TouchableOpacity>
                 <Image
                   style={styles.userDrop}
@@ -55,10 +56,8 @@ const HomeScreen = ({navigation}) => {
           </View>
         </View>
         <View style={styles.textContainer}>
-          <Text style={styles.greetText}>Hello Eddie!</Text>
-          <Text style={styles.greetTextSubtitle}>
-            Start looking for your house
-          </Text>
+          <Text style={styles.greetText}>{strings.greetUser}</Text>
+          <Text style={styles.greetTextSubtitle}>{strings.homeTitle}</Text>
         </View>
         <View style={styles.searchContainer}>
           <Input
@@ -83,7 +82,7 @@ const HomeScreen = ({navigation}) => {
         <View style={styles.categoryContainer}>
           <TouchableOpacity style={styles.boxHighlight}>
             <Image source={require('../../assets/images/house.png')} />
-            <Text style={styles.homeText}>Home</Text>
+            <Text style={styles.homeText}>{strings.home}</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.boxNoHighlight}>
             <Image source={require('../../assets/images/bloc.png')} />
@@ -102,14 +101,14 @@ const HomeScreen = ({navigation}) => {
             source={require('../../assets/images/bckgPic.png')}>
             <View style={styles.pictureLocation}>
               <Image source={require('../../assets/images/location.png')} />
-              <Text style={styles.text}> Los angeles, CA</Text>
+              <Text style={styles.text}> {strings.location}</Text>
             </View>
             <View style={styles.detailLocation}>
               <View>
                 <TouchableOpacity style={styles.like}>
                   <Image source={require('../../assets/images/like.png')} />
                 </TouchableOpacity>
-                <Text style={styles.houseTextTitle}>Special House mix</Text>
+                <Text style={styles.houseTextTitle}>{strings.homeTitle2}</Text>
               </View>
               <View style={{flexDirection: 'row'}}>
                 <View
@@ -122,7 +121,9 @@ const HomeScreen = ({navigation}) => {
                       style={styles.userIconHome}
                       source={require('../../assets/images/icon.png')}
                     />
-                    <Text style={styles.userHeaderText}>Timmy bremer</Text>
+                    <Text style={styles.userHeaderText}>
+                      {strings.userPost}
+                    </Text>
                   </View>
                   <View style={styles.rating}>
                     <TouchableOpacity>
@@ -155,7 +156,7 @@ const HomeScreen = ({navigation}) => {
                         source={require('../../assets/images/star_nohighlight.png')}
                       />
                     </TouchableOpacity>
-                    <Text style={styles.opinions}>20 onions</Text>
+                    <Text style={styles.opinions}>{strings.reviews}</Text>
                   </View>
                 </View>
                 <View
@@ -163,23 +164,29 @@ const HomeScreen = ({navigation}) => {
                     styles.detailLocationContainer2,
                     styles.detailLocationContainer,
                   ]}>
-                  <Text style={styles.price}> $1500 usd</Text>
+                  <Text style={styles.price}>{strings.price}</Text>
                   <View style={styles.rooms}>
                     <Image
                       style={styles.roomIcon}
                       source={require('../../assets/images/icon1.png')}
                     />
-                    <Text style={styles.roomNumbers}>2</Text>
+                    <Text style={styles.roomNumbers}>
+                      {strings.roomNumber2}
+                    </Text>
                     <Image
                       style={styles.roomIcon}
                       source={require('../../assets/images/icon2.png')}
                     />
-                    <Text style={styles.roomNumbers}>1</Text>
+                    <Text style={styles.roomNumbers}>
+                      {strings.roomNumber1}
+                    </Text>
                     <Image
                       style={styles.roomIcon}
                       source={require('../../assets/images/icon3.png')}
                     />
-                    <Text style={styles.roomNumbers}>1</Text>
+                    <Text style={styles.roomNumbers}>
+                      {strings.roomNumber1}
+                    </Text>
                   </View>
                 </View>
               </View>
@@ -193,14 +200,14 @@ const HomeScreen = ({navigation}) => {
             source={require('../../assets/images/bckgPic.png')}>
             <View style={styles.pictureLocation}>
               <Image source={require('../../assets/images/location.png')} />
-              <Text style={styles.text}> Los angeles, CA</Text>
+              <Text style={styles.text}> {strings.location}</Text>
             </View>
             <View style={styles.detailLocation}>
               <View>
                 <TouchableOpacity style={styles.like}>
                   <Image source={require('../../assets/images/like.png')} />
                 </TouchableOpacity>
-                <Text style={styles.houseTextTitle}>Special House mix</Text>
+                <Text style={styles.houseTextTitle}>{strings.homeTitle2}</Text>
               </View>
               <View style={{flexDirection: 'row'}}>
                 <View
@@ -213,7 +220,9 @@ const HomeScreen = ({navigation}) => {
                       style={styles.userIconHome}
                       source={require('../../assets/images/icon.png')}
                     />
-                    <Text style={styles.userHeaderText}>Timmy bremer</Text>
+                    <Text style={styles.userHeaderText}>
+                      {strings.userPost}
+                    </Text>
                   </View>
                   <View style={styles.rating}>
                     <TouchableOpacity>
@@ -246,7 +255,7 @@ const HomeScreen = ({navigation}) => {
                         source={require('../../assets/images/star_nohighlight.png')}
                       />
                     </TouchableOpacity>
-                    <Text style={styles.opinions}>20 onions</Text>
+                    <Text style={styles.opinions}>{strings.reviews}</Text>
                   </View>
                 </View>
                 <View
@@ -254,23 +263,29 @@ const HomeScreen = ({navigation}) => {
                     styles.detailLocationContainer2,
                     styles.detailLocationContainer,
                   ]}>
-                  <Text style={styles.price}> $1500 usd</Text>
+                  <Text style={styles.price}>{strings.price}</Text>
                   <View style={styles.rooms}>
                     <Image
                       style={styles.roomIcon}
                       source={require('../../assets/images/icon1.png')}
                     />
-                    <Text style={styles.roomNumbers}>2</Text>
+                    <Text style={styles.roomNumbers}>
+                      {strings.roomNumber2}
+                    </Text>
                     <Image
                       style={styles.roomIcon}
                       source={require('../../assets/images/icon2.png')}
                     />
-                    <Text style={styles.roomNumbers}>1</Text>
+                    <Text style={styles.roomNumbers}>
+                      {strings.roomNumber1}
+                    </Text>
                     <Image
                       style={styles.roomIcon}
                       source={require('../../assets/images/icon3.png')}
                     />
-                    <Text style={styles.roomNumbers}>1</Text>
+                    <Text style={styles.roomNumbers}>
+                      {strings.roomNumber1}
+                    </Text>
                   </View>
                 </View>
               </View>

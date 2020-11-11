@@ -1,9 +1,10 @@
 import {StyleSheet} from 'react-native';
 import {RFValue} from 'react-native-responsive-fontsize';
+import {colors} from '../../core/themes';
 
 export default StyleSheet.create({
   mainContainer: {
-    backgroundColor: 'white',
+    backgroundColor: colors.white,
   },
   chevronContainer: {
     marginLeft: RFValue(37),
@@ -27,7 +28,7 @@ export default StyleSheet.create({
     marginRight: 2,
   },
   opinionsText: {
-    color: '#F0F0F0',
+    color: colors.opinionsText,
     fontSize: 12,
     fontWeight: '500',
     marginLeft: 7,
@@ -48,7 +49,7 @@ export default StyleSheet.create({
     borderRadius: RFValue(90 / 2),
   },
   name: {
-    color: '#143656',
+    color: colors.darkBlue,
     fontWeight: 'bold',
     fontSize: 19,
   },
@@ -65,7 +66,7 @@ export default StyleSheet.create({
   },
   locationText: {},
   profileContentContainer: {
-    backgroundColor: '#F4F8FC',
+    backgroundColor: colors.profileContainer,
     marginTop: 23,
     borderRadius: 32,
   },
@@ -75,23 +76,24 @@ export default StyleSheet.create({
     borderRadius: 20,
   },
   homeTitle: {
-    color: '#143656',
+    color: colors.darkBlue,
     fontSize: 20,
     fontWeight: 'bold',
   },
   homeContainerScroll: {
-    backgroundColor: 'green',
     marginTop: 6,
   },
   homeCardContainer: {
+    width: 230,
+    height: 125,
     marginRight: 15,
     padding: 13,
     borderRadius: 10,
-    backgroundColor: 'white',
+    backgroundColor: colors.white,
   },
   homeCardTitle: {
-    color: '#143656',
-    fontSize: 12,
+    color: colors.darkBlue,
+    fontSize: RFValue(10),
     fontWeight: 'bold',
     alignSelf: 'center',
   },
@@ -124,22 +126,56 @@ export default StyleSheet.create({
     height: RFValue(11),
   },
   homeCardSubTitle: {
-    color: '#46D0D9',
+    color: colors.turquoise,
     fontSize: 9,
     marginTop: 5,
     alignSelf: 'center',
     top: 2,
   },
   homeInformationSection: {
-    flex: 1,
-    flexWrap: 'wrap',
     alignItems: 'center',
+    flexGrow: 0,
   },
   homeInformationText: {
-    color: 'rgba(0,0,0,0.2)',
-    fontSize: 12,
+    color: colors.whiteOpacity,
+    fontSize: RFValue(7),
   },
   Post: {
+    marginTop:20,
     marginHorizontal: 20,
+  },
+  postText:{
+    color:colors.darkBlue,
+    fontSize:20,
+    fontWeight:'bold',
+  },
+  circleEmpty: {
+    backgroundColor: colors.circleEmptyy,
+  },
+  circleFill: {
+    backgroundColor: colors.circleFull,
+  },
+  levelTexts: {
+    position: 'absolute',
+    marginLeft: 10,
+    padding: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  level: {
+    textAlignVertical: 'center',
+    textAlign: 'center',
+    color: colors.chathamsBlue,
+    fontSize: RFValue(16),
+    letterSpacing: RFValue(1),
+    fontWeight: 'bold',
+  },
+  levelText: {
+    textAlignVertical: 'center',
+    textAlign: 'center',
+    color: colors.fontBlue,
+    fontSize: RFValue(8),
+    position: 'relative',
+    top: '-16%',
   },
 });

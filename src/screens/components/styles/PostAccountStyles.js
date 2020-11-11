@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {colors} from '../../core/themes';
+import {colors} from '../../../core/themes';
 
 export default StyleSheet.create({
   mainContainer: {
@@ -105,7 +105,7 @@ export default StyleSheet.create({
   houseContainer: {
     top: 1,
     elevation: 0.5,
-    marginTop: 20,
+    marginTop: 5,
     height: 345, //cannot make the image render unless it's a fixed value
     //like this. ( picture is 559x411px ). please fix
   },
@@ -139,8 +139,8 @@ export default StyleSheet.create({
     position: 'absolute',
     backgroundColor: colors.white,
     borderRadius: 30,
-    padding: 10,
-    elevation: 0.25,
+    padding: 20,
+    elevation: 0.55,
     right: 22,
     top: -20,
   },
@@ -203,13 +203,6 @@ export default StyleSheet.create({
     color: colors.darkBlue,
     fontWeight: 'bold',
   },
-  roomNumbers: {
-    fontSize: 12,
-    marginLeft: 2,
-    padding: 1,
-    top: 3,
-    color: colors.textColor,
-  },
   rooms: {
     flexDirection: 'row',
     padding: 5,
@@ -217,6 +210,14 @@ export default StyleSheet.create({
     alignItems: 'flex-end',
     marginRight: 25,
   },
+  roomNumbers: {
+    fontSize: 12,
+    marginLeft: 2,
+    padding: 1,
+    top: 3,
+    color: colors.textColor,
+  },
+
   roomIcon: {
     width: 11,
     height: 11,

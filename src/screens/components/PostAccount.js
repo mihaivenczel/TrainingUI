@@ -6,7 +6,7 @@ import {
   TouchableOpacity,
   ImageBackground,
 } from 'react-native';
-import {HomeScreenStyles as styles} from '../styles';
+import {PostAccountStyles as styles} from './styles';
 import {
   bckgPic,
   location,

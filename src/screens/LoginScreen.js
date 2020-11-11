@@ -9,7 +9,7 @@ import {
   StatusBar,
 } from 'react-native';
 import {LoginScreenStyles} from './styles';
-import {strings} from '../core/constants/strings';
+import {strings} from '../core/constants';
 import {Input} from 'react-native-elements';
 
 const LoginScreen = ({navigation}) => {
@@ -41,20 +41,20 @@ const LoginScreen = ({navigation}) => {
 
           <View style={LoginScreenStyles.secondContainer}>
             <View style={LoginScreenStyles.titleContainer}>
-              <Text style={LoginScreenStyles.title}>Welcome</Text>
+              <Text style={LoginScreenStyles.title}>{strings.TitlePlaceholder}</Text>
               <Text style={LoginScreenStyles.subtitle}>
-                Login for enjoy findhome
+                {strings.subtitlePlaceholder}
               </Text>
             </View>
 
             <View style={LoginScreenStyles.inputContainer}>
-              <Text style={LoginScreenStyles.emailText}>Email</Text>
+              <Text style={LoginScreenStyles.emailText}>{strings.email}</Text>
 
               <Input
                 onChangeText={(text) => validateEmail(text)}
                 style={LoginScreenStyles.inputEmail}
                 autoCapitalize="none"
-                placeholder="email@email.com"
+                placeholder={strings.emailPlaceholder}
                 rightIcon={
                   valid ? (
                     <Image
@@ -68,12 +68,12 @@ const LoginScreen = ({navigation}) => {
             </View>
 
             <View style={LoginScreenStyles.inputContainer}>
-              <Text style={LoginScreenStyles.passwordText}>Password</Text>
+              <Text style={LoginScreenStyles.passwordText}>{strings.pass}</Text>
 
               <Input
                 style={LoginScreenStyles.inputPassword}
                 secureTextEntry={pass}
-                placeholder="password"
+                placeholder={strings.pass}
                 autoCapitalize="none"
                 autoCorrect={false}
                 rightIcon={
@@ -94,18 +94,18 @@ const LoginScreen = ({navigation}) => {
                 onPress={() => {
                   navigation.navigate('HomeScreen');
                 }}>
-                <Text style={LoginScreenStyles.buttonText}>LOGIN</Text>
+                <Text style={LoginScreenStyles.buttonText}>{strings.LOGIN}</Text>
               </TouchableOpacity>
             </View>
             <View style={LoginScreenStyles.registerContainer}>
               <TouchableOpacity>
                 <Text style={LoginScreenStyles.forgotText}>
-                  Forgot password?
+                  {strings.forgotPass}
                 </Text>
               </TouchableOpacity>
               <TouchableOpacity>
                 <Text style={LoginScreenStyles.registerText}>
-                  Create new account
+                  {strings.createAccount}
                 </Text>
               </TouchableOpacity>
             </View>

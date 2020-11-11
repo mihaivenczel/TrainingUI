@@ -1,14 +1,15 @@
 import {StyleSheet} from 'react-native';
+import {colors} from '../../core/themes';
 
 export default StyleSheet.create({
   background: {},
   bckgColor: {
     flex: 1,
-    backgroundColor: '#46D0D9',
+    backgroundColor: colors.turquoise,
   },
   mainContainer: {
     flex: 2,
-    backgroundColor: '#F8FBFF',
+    backgroundColor: colors.grey,
   },
   secondContainer: {
     justifyContent: 'center',
@@ -31,12 +32,12 @@ export default StyleSheet.create({
   emailText: {
     paddingBottom: 6,
     marginLeft: 5,
-    color: '#13497B',
+    color: colors.chathamsBlue,
   },
   passwordText: {
     paddingBottom: 6,
     marginLeft: 5,
-    color: '#13497B',
+    color: colors.chathamsBlue,
   },
   inputEmail: {
     borderRadius: 10,
@@ -76,14 +77,12 @@ export default StyleSheet.create({
     alignItems: 'flex-end',
   },
   registerText: {
-    fontFamily: 'Rubik-Light',
     fontSize: 14,
     padding: 10,
     fontWeight: 'bold',
-    color: '#13497B',
+    color: colors.chathamsBlue,
   },
   forgotText: {
-    fontFamily: 'Rubik-Light',
     fontSize: 14,
     padding: 10,
   },
@@ -91,21 +90,20 @@ export default StyleSheet.create({
     alignSelf: 'center',
   },
   title: {
-    color: '#13497B',
+    color: colors.chathamsBlue,
     fontWeight: 'bold',
     fontSize: 40,
-    fontFamily: 'Rubik-Light',
     alignSelf: 'center',
   },
   subtitle: {
-    color: 'rgba(0, 0, 0, 0.3)',
+    color: colors.whiteOpacity,
     fontWeight: '300',
     fontSize: 20,
     alignSelf: 'center',
   },
   button: {
     top: 15,
-    backgroundColor: '#13497B',
+    backgroundColor: colors.chathamsBlue,
     borderRadius: 10,
     minWidth: '90%',
     alignSelf: 'center',
@@ -113,7 +111,6 @@ export default StyleSheet.create({
   },
   buttonText: {
     color: 'white',
-    fontFamily: 'Rubik-Light',
     alignSelf: 'center',
     fontWeight: 'bold',
     fontSize: 14,
