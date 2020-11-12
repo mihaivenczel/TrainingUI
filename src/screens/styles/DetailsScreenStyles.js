@@ -5,6 +5,7 @@ import {colors} from '../../core/themes';
 export default StyleSheet.create({
   mainContainer: {},
   headerContainer: {
+    position: 'absolute',
     alignContent: 'center',
     flexDirection: 'row',
     marginTop: 80,
@@ -50,9 +51,10 @@ export default StyleSheet.create({
     elevation: 0.25,
   },
   bodyContainer: {
-    marginTop: 40,
     backgroundColor: colors.grey,
     borderRadius: 30,
+    bottom: 30,
+    height: 400,
   },
   bodyMargin: {
     marginHorizontal: 30,
@@ -121,13 +123,15 @@ export default StyleSheet.create({
   },
   categoriesContainer: {
     marginTop: 15,
-    borderWidth: 1,
+    marginHorizontal: -30,
     borderColor: colors.greyOpac,
+    alignContent: 'center',
+    borderTopWidth: 1,
   },
   category: {
     marginTop: 11,
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
     marginBottom: 11,
   },
   socialCategory: {
@@ -153,16 +157,24 @@ export default StyleSheet.create({
   descriptionContainer: {
     marginTop: 25,
   },
+  bottomBorder: {
+    borderTopWidth: 1,
+    borderColor: colors.greyOpac,
+    marginHorizontal: -30,
+    marginTop: 5,
+  },
   descriptionText: {
     fontSize: 12,
     color: colors.textColor,
   },
   bookingContainer: {
-    marginTop: 30,
-    borderRadius: 20,
+    position: 'absolute',
+    borderTopRightRadius: 20,
+    borderTopLeftRadius: 20,
     backgroundColor: colors.white,
     flexDirection: 'row',
-    padding:20,
+    padding: 20,
+    bottom: 1,
   },
   bookingContainerLeft: {
     flex: 1,
@@ -175,7 +187,7 @@ export default StyleSheet.create({
     fontSize: 20,
     alignSelf: 'center',
     paddingRight: 20,
-    paddingTop:10,
+    paddingTop: 10,
     fontWeight: 'bold',
   },
   reserveButton: {

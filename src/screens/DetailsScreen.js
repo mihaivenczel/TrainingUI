@@ -1,6 +1,7 @@
 import React from 'react';
-import {View, Text, Image, TouchableOpacity} from 'react-native';
+import {View, Text, Image, TouchableOpacity, ScrollView} from 'react-native';
 import {DetailsScreenStyles as styles} from './styles';
+import CarouselSwipe from './components/CarouselSwipe';
 import {
   icon as profilepic,
   locationpin,
@@ -36,6 +37,8 @@ const DetailsScreen = ({navigation}) => {
     information,
     comments,
     offers,
+    two: '2',
+    one: '1',
     description: 'Description',
     booked: 'Available',
     location: 'Los angeles, CA',
@@ -52,9 +55,14 @@ const DetailsScreen = ({navigation}) => {
     LoremIpsum:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
   };
+
   return (
-    <View>
+    <ScrollView>
       <View style={styles.mainContainer}>
+        <View>
+          <CarouselSwipe />
+        </View>
+
         <View style={styles.headerContainer}>
           <View style={styles.headerLeft}>
             <TouchableOpacity
@@ -73,10 +81,6 @@ const DetailsScreen = ({navigation}) => {
               <Image source={mockData.like} />
             </TouchableOpacity>
           </View>
-        </View>
-
-        <View style={{marginTop: 40}}>
-          <Text> carousel here </Text>
         </View>
 
         <View style={styles.bodyContainer}>
@@ -109,11 +113,11 @@ const DetailsScreen = ({navigation}) => {
 
             <View style={styles.rooms}>
               <Image style={styles.roomIcon} source={mockData.icon1} />
-              <Text style={styles.roomNumbers}>2</Text>
+              <Text style={styles.roomNumbers}>{mockData.two}</Text>
               <Image style={styles.roomIcon} source={mockData.icon2} />
-              <Text style={styles.roomNumbers}>1</Text>
+              <Text style={styles.roomNumbers}>{mockData.one}</Text>
               <Image style={styles.roomIcon} source={mockData.icon3} />
-              <Text style={styles.roomNumbers}>1</Text>
+              <Text style={styles.roomNumbers}>{mockData.one}</Text>
             </View>
 
             <View style={styles.categoriesContainer}>
@@ -150,6 +154,7 @@ const DetailsScreen = ({navigation}) => {
                 </TouchableOpacity>
               </View>
             </View>
+            <View style={styles.bottomBorder}/>
 
             <View style={styles.descriptionContainer}>
               <Text style={styles.bodyTitleDescription}>
@@ -158,20 +163,19 @@ const DetailsScreen = ({navigation}) => {
               <Text style={styles.descriptionText}>{mockData.LoremIpsum}</Text>
             </View>
           </View>
-
-          <View style={styles.bookingContainer}>
-            <View style={styles.bookingContainerLeft}>
-              <Text style={styles.price}>{mockData.price}</Text>
-            </View>
-            <View style={styles.bookingContainerRight}>
-              <TouchableOpacity style={styles.reserveButton}>
-                <Text style={styles.reserve}>{mockData.bookNow}</Text>
-              </TouchableOpacity>
-            </View>
-          </View>
         </View>
       </View>
-    </View>
+      <View style={styles.bookingContainer}>
+        <View style={styles.bookingContainerLeft}>
+          <Text style={styles.price}>{mockData.price}</Text>
+        </View>
+        <View style={styles.bookingContainerRight}>
+          <TouchableOpacity style={styles.reserveButton}>
+            <Text style={styles.reserve}>{mockData.bookNow}</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+    </ScrollView>
   );
 };
 
