@@ -83,7 +83,6 @@ export default StyleSheet.create({
   boxHighlight: {
     backgroundColor: colors.turquoise,
     borderRadius: 10,
-
     padding: 20,
     paddingBottom: 40,
   },

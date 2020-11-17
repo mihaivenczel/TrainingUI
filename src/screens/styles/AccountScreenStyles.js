@@ -141,13 +141,13 @@ export default StyleSheet.create({
     fontSize: RFValue(7),
   },
   Post: {
-    marginTop:20,
+    marginTop: 20,
     marginHorizontal: 20,
   },
-  postText:{
-    color:colors.darkBlue,
-    fontSize:20,
-    fontWeight:'bold',
+  postText: {
+    color: colors.darkBlue,
+    fontSize: 20,
+    fontWeight: 'bold',
   },
   circleEmpty: {
     backgroundColor: colors.circleEmptyy,
@@ -156,11 +156,8 @@ export default StyleSheet.create({
     backgroundColor: colors.circleFull,
   },
   levelTexts: {
-    position: 'absolute',
-    marginLeft: 10,
-    padding: 10,
-    alignItems: 'center',
-    justifyContent: 'center',
+    padding:20,
+    flexDirection: 'column',
   },
   level: {
     textAlignVertical: 'center',
@@ -176,6 +173,7 @@ export default StyleSheet.create({
     color: colors.fontBlue,
     fontSize: RFValue(8),
     position: 'relative',
-    top: '-16%',
+    bottom: 5,
+    right: 1,
   },
 });

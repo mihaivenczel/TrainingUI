@@ -78,7 +78,7 @@ const AccountScreen = ({navigation}) => {
               </View>
               <View style={styles.homeSection}>
                 <View style={styles.leftHomeSection}>
-                  <Svg width={70} height={70}>
+                  <Svg width={70} height={70} style={{alignSelf: 'center'}}>
                     <View style={styles.levelTexts}>
                       <Text style={styles.level}>{mockData.level}</Text>
                       <Text style={styles.levelText}>{mockData.levelText}</Text>
@@ -87,17 +87,18 @@ const AccountScreen = ({navigation}) => {
                       stroke={colors.circleEmpty}
                       fill="none"
                       r={radius}
-                      cx={39}
-                      cy={32}
+                      cx={35}
+                      cy={35}
                       strokeWidth={strokeWidth}
                       strokeDasharray={`${circumference}`}
                     />
+
                     <Circle
                       stroke={colors.circleFill}
                       fill="none"
                       r={radius}
-                      cx={39}
-                      cy={32}
+                      cx={35}
+                      cy={35}
                       strokeWidth={strokeWidth}
                       strokeDasharray={`${fillLevel} ${
                         circumference - fillLevel
@@ -141,7 +142,8 @@ const AccountScreen = ({navigation}) => {
           </ScrollView>
         </View>
         <View style={styles.Post}>
-          <TouchableOpacity onPress={() => navigation.navigate('DetailsScreen')}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate('DetailsScreen')}>
             <Text style={styles.postText}>{mockData.post}</Text>
           </TouchableOpacity>
           <PostAccount />

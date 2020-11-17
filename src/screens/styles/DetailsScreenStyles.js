@@ -18,11 +18,13 @@ export default StyleSheet.create({
     alignSelf: 'center',
     backgroundColor: colors.white,
     borderRadius: 50,
-    padding: 10,
+    paddingHorizontal: 12,
+    paddingVertical:8,
     elevation: 0.25,
   },
   chevron: {
-    fontSize: RFValue(16),
+    right:1,
+    alignSelf: 'center',
   },
   headerMiddle: {
     flex: 1,
@@ -156,6 +158,7 @@ export default StyleSheet.create({
   },
   descriptionContainer: {
     marginTop: 25,
+    height:400,
   },
   bottomBorder: {
     borderTopWidth: 1,

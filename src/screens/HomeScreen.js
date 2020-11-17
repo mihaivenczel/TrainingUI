@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Text,
@@ -13,6 +13,7 @@ import {Input} from 'react-native-elements';
 import {strings} from '../core/constants';
 
 const HomeScreen = ({navigation}) => {
+  const [selected, setSelected] = useState(0);
   return (
     <ScrollView style={styles.bckgColor}>
       <View style={styles.mainContainer}>
@@ -80,18 +81,53 @@ const HomeScreen = ({navigation}) => {
         </View>
 
         <View style={styles.categoryContainer}>
-          <TouchableOpacity style={styles.boxHighlight}>
+          <TouchableOpacity
+            onPress={() => {
+              setSelected(0);
+            }}
+            style={
+              selected === 0 ? styles.boxHighlight : styles.boxNoHighlight
+            }>
             <Image source={require('../../assets/images/house.png')} />
-            <Text style={styles.homeText}>{strings.home}</Text>
+            {selected === 0 ? (
+              <Text style={styles.homeText}>{strings.home}</Text>
+            ) : null}
           </TouchableOpacity>
-          <TouchableOpacity style={styles.boxNoHighlight}>
+          <TouchableOpacity
+            onPress={() => {
+              setSelected(1);
+            }}
+            style={
+              selected === 1 ? styles.boxHighlight : styles.boxNoHighlight
+            }>
             <Image source={require('../../assets/images/bloc.png')} />
+            {selected === 1 ? (
+              <Text style={styles.homeText}>{strings.home}</Text>
+            ) : null}
           </TouchableOpacity>
-          <TouchableOpacity style={styles.boxNoHighlight}>
+          <TouchableOpacity
+            onPress={() => {
+              setSelected(2);
+            }}
+            style={
+              selected === 2 ? styles.boxHighlight : styles.boxNoHighlight
+            }>
             <Image source={require('../../assets/images/keys.png')} />
+            {selected === 2 ? (
+              <Text style={styles.homeText}>{strings.home}</Text>
+            ) : null}
           </TouchableOpacity>
-          <TouchableOpacity style={styles.boxNoHighlight}>
+          <TouchableOpacity
+            onPress={() => {
+              setSelected(3);
+            }}
+            style={
+              selected === 3 ? styles.boxHighlight : styles.boxNoHighlight
+            }>
             <Image source={require('../../assets/images/percentage.png')} />
+            {selected === 3 ? (
+              <Text style={styles.homeText}>{strings.home}</Text>
+            ) : null}
           </TouchableOpacity>
         </View>
 
