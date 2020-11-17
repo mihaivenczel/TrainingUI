@@ -156,8 +156,11 @@ export default StyleSheet.create({
     backgroundColor: colors.circleFull,
   },
   levelTexts: {
-    padding:20,
+    padding: 20,
     flexDirection: 'column',
+  },
+  svgStyle: {
+    alignSelf: 'center',
   },
   level: {
     textAlignVertical: 'center',

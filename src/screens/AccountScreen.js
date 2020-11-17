@@ -78,7 +78,7 @@ const AccountScreen = ({navigation}) => {
               </View>
               <View style={styles.homeSection}>
                 <View style={styles.leftHomeSection}>
-                  <Svg width={70} height={70} style={{alignSelf: 'center'}}>
+                  <Svg width={70} height={70} style={styles.svgStyle}>
                     <View style={styles.levelTexts}>
                       <Text style={styles.level}>{mockData.level}</Text>
                       <Text style={styles.levelText}>{mockData.levelText}</Text>
